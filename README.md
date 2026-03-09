@@ -20,23 +20,22 @@ Por exemplo, se a mente de Amy está no Professor, a do Professor no Bender, e a
 
 Os "Coringas" (X e Y)
 
-A regra do episódio dita que duas pessoas não podem usar a máquina juntas mais de uma vez. Para burlar isso e resolver os ciclos, o Teorema de Keeler prova que precisamos adicionar exatamente dois novos corpos que nunca usaram a máquina com ninguém. No código, eles são instanciados como x e y.
+Para burlar as regras e resolver os ciclos, o algoritmo prova que precisamos adicionar exatamente dois novos corpos que nunca usaram a máquina com ninguém. No código, eles são instanciados como x e y.
 
 Resolvendo Ciclos Individualmente
 Para cada ciclo de mentes bagunçadas, a função solucionar_ciclo divide o problema ao meio (variável i = len(cycle) // 2):
 
-    O coringa x troca de corpo com a primeira metade do ciclo.
+O coringa x troca de corpo com a primeira metade do ciclo.
 
-    O coringa y troca de corpo com a segunda metade.
+O coringa y troca de corpo com a segunda metade.
 
-    Depois, x e y fazem trocas estratégicas com as "pontas" dessa divisão (cycle[i] e cycle[0]).
-    Isso permite que cada mente seja depositada em seu corpo original sem nunca repetir uma dupla na máquina.
+Depois, x e y fazem trocas estratégicas com as "pontas" dessa divisão (cycle[i] e cycle[0]).
+Isso permite que cada mente seja depositada em seu corpo original sem nunca repetir uma dupla na máquina.
 
 Sempre que resolvemos um ciclo usando o método acima, as mentes dos coringas x e y acabam trocadas entre si.
 
-    Se houver um número par de ciclos, as mentes de x e y voltarão aos seus próprios corpos naturalmente ao final do processo.
-
-    Se houver um número ímpar de ciclos (variável n_de_ciclos % 2), o algoritmo adiciona uma última troca: ('x', 'y'), garantindo que     os coringas também voltem ao estado natural.
+Se houver um número par de ciclos, as mentes de x e y voltarão aos seus próprios corpos naturalmente ao final do processo.
+Se houver um número ímpar de ciclos (variável n_de_ciclos % 2), o algoritmo adiciona uma última troca: ('x', 'y'), garantindo que     os coringas também voltem ao estado natural.
 
 <img width="465" height="693" alt="saida teorema de futurama" src="https://github.com/user-attachments/assets/df0a3d64-f8fe-4e00-8b3d-521f622a4160" />
 
